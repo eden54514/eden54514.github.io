@@ -1,0 +1,118 @@
+*{
+    box-sizing:border-box;
+}
+
+
+
+#head{
+    
+    grid-area: head;
+    background-color: rgb(29, 185, 185);
+    text-align: center;
+    font: bold;
+    color: black;
+    height: 100px;
+}
+
+#menu{
+    color: white;
+    grid-area: menu;
+    background-color: darkslategray;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+#footer{
+    font: bolder;
+    height: 100px;
+    color: white;
+    text-align: center;
+    grid-area: footer;
+    background-color: darkslategray;
+}
+#column{
+    height: 300px;
+    grid-area: column;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+#menu1{
+    
+    width: 60px;
+    border-right: 1px solid black;
+    
+}
+#menu2{
+    width: 60px;
+    border-right: 1px solid black;
+
+}
+#menu3{
+    width: 60px;
+    border-right: 1px solid black;
+
+}
+
+
+
+#column1{
+    background-color: darkgrey;
+    width: 400px;
+}
+
+#column2{
+    background-color: rgb(195, 190, 190);
+    width: 800px;
+}
+#column3{
+    background-color: rgb(235, 230, 230);
+    width: 600px;
+}
+@media screen and (max-width:600px) {
+    #container{
+    
+        display: grid;
+        grid-template-areas: 
+           'head head head head  ' 
+           'head head head head  '
+           'menu menu menu menu '
+           'column column column column '
+           'column  column column column'
+           'column  column column column'
+           'footer footer footer footer'
+           'footer footer footer footer'
+    }
+
+#column{
+  
+    display: flex;
+    flex-direction:row-reverse;
+    
+}
+
+
+}
+
+@media screen and (min-width:600px) {
+
+    #container{
+    
+        display: grid;
+        grid-template-areas: 
+           'head head head head  ' 
+           'head head head head  '
+           'menu menu menu menu '
+           'column column column column '
+           'column  column column column'
+           'column  column column column'
+           'footer footer footer footer'
+           'footer footer footer footer'
+    }
+
+
+    
+}
