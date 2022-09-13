@@ -160,10 +160,7 @@ const d = a.reduce(function(prevValue, elem, i, array){
 
 
 //.......................................
-
 //9
-
-
 function myFunctionTest(expected, found) {
     if (expected === found) {
       return "TEST SUCCEEDED";
@@ -172,29 +169,58 @@ function myFunctionTest(expected, found) {
     }
   }
 
-  console.log("Expected output of max(20,10) is 10 and  "+ myFunctionTest(20, max(20,10)));
+//   console.log("Expected output of max(20,10) is 10 and  "+ myFunctionTest(20, max(20,10)));
 
-  console.log("Expected output of maxOfThree(10,20,30) is 30 and  "+myFunctionTest(30, maxOfThree(10,20,30)));
+//   console.log("Expected output of maxOfThree(10,20,30) is 30 and  "+myFunctionTest(30, maxOfThree(10,20,30)));
 
-  console.log(" Expected output of isVowel('e') is true and "+myFunctionTest(true, isVowel('e')));
+//   console.log(" Expected output of isVowel('e') is true and "+myFunctionTest(true, isVowel('e')));
 
-  console.log(" Expected output of sum([1,2,3,4]) is 10 and "+ myFunctionTest(10, sum([1,2,3,4])));
+//   console.log(" Expected output of sum([1,2,3,4]) is 10 and "+ myFunctionTest(10, sum([1,2,3,4])));
 
-  console.log(" Expected output of multiply([1,2,3,4]) is 24 and "+myFunctionTest(24, multiply([1,2,3,4])));
+//   console.log(" Expected output of multiply([1,2,3,4]) is 24 and "+myFunctionTest(24, multiply([1,2,3,4])));
 
-  console.log(" Expected output of reverse('eden') is nede and " + myFunctionTest("nede", reverse("eden")));
+//   console.log(" Expected output of reverse('eden') is nede and " + myFunctionTest("nede", reverse("eden")));
 
-  console.log(" Expected output of findLongestWord([edeneeeeee","ede","ed","e]) is 10 and "+ myFunctionTest(10, findLongestWord(["edeneeeeee","ede","ed","e"])));
+//   console.log(" Expected output of findLongestWord([edeneeeeee","ede","ed","e]) is 10 and "+ myFunctionTest(10, findLongestWord(["edeneeeeee","ede","ed","e"])));
+
+// console.log(" Expected output of filterLongestWord([edene","eeeee","ede","ed","e], 2) is ([edene","eeeee","ede]) and " + myFunctionTest(['edene','eeeee', 'ede'], filterLongestWord(["edene","eeeee","ede","ed","e"], 2)));
+
+// console.log(" Expected output of map is [10,30,50,30,30] and " + myFunctionTest('[10,30,50,30,30]',b));
+
+// console.log(" Expected output of filter is [3,3,3] and " + myFunctionTest('[3,3,3]',c));
+
+// console.log(" Expected output of reduce is 135 and " + myFunctionTest(135,d));
+
+// Functional programming
+//1
+// x=[1,2,3]
 
 
-console.log(" Expected output of filterLongestWord([edene","eeeee","ede","ed","e], 2) is ([edene","eeeee","ede]) and " + myFunctionTest(['edene','eeeee', 'ede'], filterLongestWord(["edene","eeeee","ede","ed","e"], 2)));
+function sum11(x){
+    return x.reduce((a,b)=> a+b);
+ 
+}
+
+function multiple1(x){
+    return x.reduce((a,b)=> a*b);
+}
+
+function rev1(x){
+
+return  x.split('').reverse().join('');
+}
 
 
-console.log(" Expected output of map is [10,30,50,30,30] and " + myFunctionTest('[10,30,50,30,30]',b));
+function longest(x,i){
 
-console.log(" Expected output of filter is [3,3,3] and " + myFunctionTest('[3,3,3]',c));
+    return x.filter(a=>a.length>i);
+}
 
-console.log(" Expected output of reduce is 135 and " + myFunctionTest(135,d));
+
+console.log(multiple1([1,2,3,4]))
+console.log(sum11([1,2,3]));
+console.log(rev1('eden'));
+console.log(longest(["eden","haben","filmon","edu","ed"],3));
 
 
 
